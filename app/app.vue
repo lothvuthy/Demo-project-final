@@ -1,5 +1,3 @@
 <template>
-  <div>
-    <h1 class="text-amber-200">Hello</h1>
-  </div>
+  <NuxtPage/>
 </template>
