@@ -1,0 +1,173 @@
+{
+  "slides": [
+    {
+      "id": 1,
+      "image": "https://i.pinimg.com/736x/fc/ad/23/fcad2327daa639e8892ee64bf8ce0311.jpg",
+      "title": " Premium Headphones",
+      "highlight": "Today",
+      "description": "Shop your favorite products and enjoy exclusive discounts.",
+      "discount": "70% OFF"
+    },
+    {
+      "id": 2,
+      "image": "https://i.pinimg.com/1200x/7c/c6/99/7cc699ef946660a6ac48a375717cd1a7.jpg",
+      "title": "Premium Smart Watch",
+      "highlight": "Sale",
+      "description": "Get amazing products at special prices.",
+      "discount": "50% OFF"
+    },
+    {
+      "id": 3,
+      "image": "https://i.pinimg.com/736x/55/37/89/5537891accd14f8083af9d2305cc8155.jpg",
+      "title": "Elegant Formal Shirts",
+      "highlight": "For You",
+      "description": "Explore our latest collection with amazing quality and prices.",
+      "discount": "30% OFF"
+    }
+  ],
+"features": [
+  {
+    "id": 1,
+    "icon": "Truck",
+    "title": "Free Shipping",
+    "description": "On orders over $50"
+  },
+  {
+    "id": 2,
+    "icon": "RotateCcw",
+    "title": "Money Guarantee",
+    "description": "30 days money back"
+  },
+  {
+    "id": 3,
+    "icon": "CreditCard",
+    "title": "Secure Payment",
+    "description": "100% secure payment"
+  },
+  {
+    "id": 4,
+    "icon": "Headphones",
+    "title": "24/7 Support",
+    "description": "Dedicated support"
+  }
+],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Electronics",
+      "items": 120,
+      "image": "https://i.pinimg.com/1200x/36/d1/f7/36d1f7838eeb16e7d4c940adf5cf0838.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Fashion",
+      "items": 150,
+      "image": "https://i.pinimg.com/736x/09/4e/23/094e23322b100577fb9a48365a3c1578.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Shoes",
+      "items": 80,
+      "image": "https://i.pinimg.com/1200x/c1/47/d7/c147d75d161d89ee196b1e3622fecb8c.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Bags",
+      "items": 60,
+      "image": "https://i.pinimg.com/736x/0f/34/48/0f34483b4a0e72a2d0df3d207a070eff.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Watches",
+      "items": 40,
+      "image": "https://i.pinimg.com/736x/c8/d8/25/c8d825da985d3cc18c92160bb40a5cd3.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Accessories",
+      "items": 70,
+      "image": "https://i.pinimg.com/736x/1a/83/c8/1a83c8eab1ef20410ad25ca5d394df03.jpg"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "name": "Smart Watch Series 8",
+      "price": 199.99,
+      "oldPrice": 249.99,
+      "discount": 20,
+      "rating": 4.8,
+      "reviews": 120,
+      "image": "https://i.pinimg.com/736x/94/2f/fd/942ffd38083ba3063b7004e934661de7.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Wireless Headphones",
+      "price": 59.99,
+      "oldPrice": 89.99,
+      "discount": 33,
+      "rating": 4.7,
+      "reviews": 86,
+      "image": "https://i.pinimg.com/1200x/56/3b/3d/563b3d63577f621215a82aa2f45df7c7.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Canon EOS Camera",
+      "price": 499.99,
+      "oldPrice": 599.99,
+      "discount": 17,
+      "rating": 4.9,
+      "reviews": 95,
+      "image": "https://i.pinimg.com/736x/91/8a/56/918a5630c23dbd06403f47281d089c92.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Force 1",
+      "price": 89.99,
+      "oldPrice": 119.99,
+      "discount": 25,
+      "rating": 4.8,
+      "reviews": 75,
+      "image": "https://i.pinimg.com/736x/0f/5f/ef/0f5fef5eeb0f73ec63290a698b4bf980.jpg"
+    }
+  ],
+
+  "newArrivals": [
+    {
+      "id": 1,
+      "name": "Fjallraven Backpack",
+      "price": 79.99,
+      "rating": 4.7,
+      "image": "/images/backpack.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Nike Running Shoes",
+      "price": 99.99,
+      "rating": 4.8,
+      "image": "/images/running-shoes.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Cotton T-Shirt",
+      "price": 24.99,
+      "rating": 4.6,
+      "image": "/images/tshirt.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Leather Wallet",
+      "price": 29.99,
+      "rating": 4.7,
+      "image": "/images/wallet.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Indoor Plant",
+      "price": 19.99,
+      "rating": 4.5,
+      "image": "/images/plant.jpg"
+    }
+  ]
+}
