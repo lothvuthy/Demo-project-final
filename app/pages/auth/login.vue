@@ -1,3 +1,4 @@
+
 <template>
   <div class="min-h-screen bg-gray-50 flex items-center justify-center px-4 sm:px-6 py-6 sm:py-8">
     <div class="w-full max-w-md bg-white rounded-xl shadow-md px-6 sm:px-8 py-8 sm:py-10">

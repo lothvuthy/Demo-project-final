@@ -46,7 +46,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-gray-300">
+  <div class="min-h-screen bg-white">
     <section class=" px-4 md:px-8 py-6">
       <div
         class="relative max-w-7xl w-full  mx-auto  h-150 md:h-160 overflow-hidden rounded-3xl"
