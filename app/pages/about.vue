@@ -19,7 +19,6 @@
           {{ shopInfo.journey || "SHopiO began with a simple idea: to make quality products accessible to everyone, effortlessly. From our humble beginnings in a small startup garage, we've grown into a global destination for curated goods. We believe in the power of good design and reliable service to simplify your daily life." }}
         </p>
       </section>
-
       <!-- ===== Mission & Vision ===== -->
       <section class="grid md:grid-cols-2 gap-6 mb-16">
         <!-- Our Mission -->

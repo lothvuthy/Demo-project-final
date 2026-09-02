@@ -34,8 +34,8 @@ const clearSearch = () => {
 };
 </script>
 <template>
-  <div class="min-h-screen bg-gray-300">
-    <section class="bg-gray-300 px-6 py-14">
+  <div class="min-h-screen bg-white">
+    <section class="bg-white px-6 py-14">
       <div class="mx-auto max-w-7xl text-center">
         <p
           class="mb-3 text-sm font-bold uppercase tracking-widest text-orange-500"
@@ -80,7 +80,7 @@ const clearSearch = () => {
         </div>
       </div>
     </section>
-    <section class="mx-auto max-w-7xl px-6 py-10 bg-gray-300">
+    <section class="mx-auto max-w-7xl px-6 py-10 bg-white">
       <div
         class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
       >
