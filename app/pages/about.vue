@@ -147,6 +147,8 @@ const shopInfo = ref({
   vision: ''
 })
 
+
+
 const stats = ref({
   customers: '',
   products: '',
