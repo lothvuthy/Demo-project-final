@@ -57,48 +57,88 @@
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref } from 'vue'
 
-const API_LOGIN_URL = '/api/auth/login'
+const API_USERS_URL = 'http://localhost:8000/users'
 
-const form = ref({ email: '', password: '' })
+const form = ref({
+  email: '',
+  password: ''
+})
+
 const loading = ref(false)
-const message = ref({ text: '', type: '' })
+
+const message = ref({
+  text: '',
+  type: ''
+})
 
 const handleLogin = async () => {
+  // Validate fields
   if (!form.value.email.trim() || !form.value.password.trim()) {
-    message.value = { text: '⚠️ Please fill in all fields.', type: 'error' }
+    message.value = {
+      text: '⚠️ Please fill in all fields.',
+      type: 'error'
+    }
     return
   }
 
   loading.value = true
-  message.value = { text: '', type: '' }
+  message.value = {
+    text: '',
+    type: ''
+  }
 
   try {
-    const result = await $fetch(API_LOGIN_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: {
-        email: form.value.email.trim(),
-        password: form.value.password.trim()
-      }
+    // Get all users from JSON Server
+    const users = await $fetch(API_USERS_URL, {
+      method: 'GET'
     })
 
-    message.value = { text: '✅ Login successful! Redirecting...', type: 'success' }
+    // Find matching user
+    const user = users.find(
+      (user) =>
+        user.email.toLowerCase() === form.value.email.trim().toLowerCase() &&
+        user.password === form.value.password.trim()
+    )
 
-    if (result.token) {
-      localStorage.setItem('eshop_token', result.token)
-      localStorage.setItem('eshop_user', JSON.stringify(result.user || {}))
+    // No matching user
+    if (!user) {
+      message.value = {
+        text: '❌ Invalid email or password.',
+        type: 'error'
+      }
+      return
     }
 
-    setTimeout(() => navigateTo('/'), 1200)
+    // Login successful
+    message.value = {
+      text: '✅ Login successful! Redirecting...',
+      type: 'success'
+    }
+
+    // Save logged-in user
+    localStorage.setItem(
+      'eshop_user',
+      JSON.stringify(user)
+    )
+
+    // Optional: save a simple login status
+    localStorage.setItem('eshop_logged_in', 'true')
+
+    // Redirect to home
+    setTimeout(() => {
+      navigateTo('/')
+    }, 1200)
 
   } catch (err) {
-    const errorMsg = err.data?.message || err.message || 'Login failed. Please try again.'
-    message.value = { text: `❌ ${errorMsg}`, type: 'error' }
     console.error('Login Error:', err)
+
+    message.value = {
+      text: '❌ Unable to connect to the server.',
+      type: 'error'
+    }
   } finally {
     loading.value = false
   }
