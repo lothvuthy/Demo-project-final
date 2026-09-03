@@ -18,6 +18,7 @@
     </section>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    
       <!-- ===== Journey Section ===== -->
       <section class="text-center mb-16">
         <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
@@ -229,22 +230,7 @@
     </div>
 
     <!-- ===== Call to Action Section ===== -->
-    <section
-      class="bg-linear-to-r from-orange-500 to-orange-600 py-12 text-center"
-    >
-      <h2 class="text-xl sm:text-2xl font-semibold text-white mb-2">
-        Ready to Elevate Your Everyday?
-      </h2>
-      <p class="text-orange-100 text-sm mb-6">
-        Explore our latest collections and find your new favorites.
-      </p>
-      <NuxtLink
-        to="/"
-        class="inline-block bg-white text-orange-500 font-bold py-2 px-6 rounded-md hover:bg-orange-50 transition-colors shadow-md"
-      >
-        Shop Our Collection
-      </NuxtLink>
-    </section>
+
 
     <!-- ===== Footer ===== -->
     <footer class="bg-orange-50 py-8 text-center border-t border-orange-100">
@@ -285,6 +271,8 @@ const shopInfo = ref({
   mission: "",
   vision: "",
 });
+
+
 
 const stats = ref({
   customers: "",

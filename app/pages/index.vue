@@ -79,7 +79,7 @@ onUnmounted(() => {
                   ><button class="px-7 py-4 rounded-2xl bg-black hover:bg-amber-500 text-white font-semibold">Shop Deals</button> </NuxtLink
                 >
                 <NuxtLink
-                  to="/Deals"
+                  to="/"
                   ><button class="px-7 py-4 rounded-2xl bg-gray-400 hover:bg-amber-500 text-white font-semibold">Explore Deals</button> </NuxtLink
                 >
               </div>

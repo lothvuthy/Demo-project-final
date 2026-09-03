@@ -88,7 +88,7 @@ import { ref } from 'vue'
 // ==============================================
 // 🔌 API CONFIGURATION — UPDATE THIS LATER!
 // ==============================================
-const API_REGISTER_URL = '/api/auth/register'
+const API_REGISTER_URL = 'http://localhost:8000/users'
 // Example full URL: 'http://localhost:5000/api/auth/register'
 // ==============================================
 

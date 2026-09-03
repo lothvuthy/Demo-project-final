@@ -84,9 +84,9 @@ const handleSubmit = async () => {
       body: { email: form.value.email.trim() }
     })
 
-    // ✅ Success
+    //  Success
     message.value = {
-      text: result.message || '✅ Reset link sent! Please check your email.',
+      text: result.message || ' Reset link sent! Please check your email.',
       type: 'success'
     }
 
