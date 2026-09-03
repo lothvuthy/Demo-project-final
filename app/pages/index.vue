@@ -162,7 +162,7 @@ onUnmounted(() => {
           <h2 class="text-3xl md:text-4xl font-bold">Save Up To 50%</h2>
           <p class="text-gray-400 mt-3">Get amazing on selectd products.</p>
           <NuxtLink
-            to="/deals"
+            to="/shop"
             class="inline-block text-black bg-amber-50 hover:bg-amber-500 px-6 py-3 rounded-lg mt-6 font-semibold transition"
             >Shop Now</NuxtLink
           >
