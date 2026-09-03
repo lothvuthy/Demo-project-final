@@ -115,7 +115,7 @@
     <section class="bg-linear-to-r from-orange-500 to-orange-600 py-12 text-center">
       <h2 class="text-xl sm:text-2xl font-semibold text-white mb-2">Ready to Elevate Your Everyday?</h2>
       <p class="text-orange-100 text-sm mb-6">Explore our latest collections and find your new favorites.</p>
-      <NuxtLink to="/" class="inline-block bg-white text-orange-500 font-bold py-2 px-6 rounded-md hover:bg-orange-50 transition-colors shadow-md">
+      <NuxtLink to="/shop" class="inline-block bg-white text-orange-500 font-bold py-2 px-6 rounded-md hover:bg-orange-50 transition-colors shadow-md">
         Shop Our Collection
       </NuxtLink>
     </section>
