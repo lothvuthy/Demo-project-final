@@ -85,12 +85,6 @@ onUnmounted(() => {
               </div>
             </div>
           </div>
-          <div
-            class="absolute right-8 md:right-16 top-14 md:top-16 z-20 w-15 h-15 md:w-36 md:h-36 rounded-full bg-orange-500 text-white flex flex-col items-center justify-center shadow-lg"
-          >
-            <span class="text-sm md:text-2xl">{{ slide.discount }}</span>
-            <span class="text-2xl md:text-2xl font-bold">Sale</span>
-          </div>
         </div>
         <div class="absolute bottom-4 left-2 z-20 flex gap-2">
           <button

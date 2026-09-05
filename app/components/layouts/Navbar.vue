@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { Search, Heart, ShoppingCart, Menu, X,User } from "lucide-vue-next";
+import {  Heart, ShoppingCart, Menu, X,User } from "lucide-vue-next";
 
 const isMenuOpen = ref(false);
 
@@ -70,11 +70,7 @@ const isActive = (path) => {
           </NuxtLink>
         </div>
         <div class="flex items-center gap-1 sm:gap-2">
-          <button
-            class="p-2 sm:p-2.5 rounded-xl transition hover:bg-orange-50 hover:text-orange-500"
-          >
-            <Search :size="20" />
-          </button>
+         
           <NuxtLink to="/auth/login">
             <button
               class="p-2 sm:p-2.5 rounded-xl transition hover:bg-orange-50 hover:text-orange-500"

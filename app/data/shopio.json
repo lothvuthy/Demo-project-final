@@ -2,27 +2,27 @@
   "slides": [
     {
       "id": "1",
-      "image": "https://i.pinimg.com/736x/fc/ad/23/fcad2327daa639e8892ee64bf8ce0311.jpg",
-      "title": " Premium Headphones",
-      "highlight": "Today",
-      "description": "Shop your favorite products and enjoy exclusive discounts.",
-      "discount": "70% OFF"
+      "image": "https://i.pinimg.com/1200x/5f/9f/36/5f9f36e0c40f2a7c4295cab399671dc8.jpg",
+      "title": "Premium Headphones",
+      "highlight": "TRENDING NOW",
+      "description": "Upgrade your sound with premium audio made for music lovers."
+      
     },
     {
       "id": "2",
-      "image": "https://i.pinimg.com/1200x/7c/c6/99/7cc699ef946660a6ac48a375717cd1a7.jpg",
+      "image": "https://i.pinimg.com/736x/a9/3f/33/a93f33443a2bdc3ad555a38be956e111.jpg",
       "title": "Premium Smart Watch",
-      "highlight": "Sale",
-      "description": "Get amazing products at special prices.",
-      "discount": "50% OFF"
+      "highlight": "SMARTER EVERY DAY",
+      "description": "Stay connected, track your goals, and upgrade your everyday style."
+      
     },
     {
       "id": "3",
-      "image": "https://i.pinimg.com/736x/a0/99/61/a099610fc6511471edabd64f5e983909.jpg",
-      "title": "Elegant Formal Shirts",
-      "highlight": "For You",
-      "description": "Explore our latest collection with amazing quality and prices.",
-      "discount": "30% OFF"
+      "image": "https://i.pinimg.com/1200x/9d/79/b0/9d79b0f40a97bb1236a02825b34b278e.jpg",
+      "title": "NIKE ",
+      "highlight": "JUST DO IT.",
+      "description": "Fresh styles. Bold energy. Built to move."
+     
     }
   ],
   "features": [
