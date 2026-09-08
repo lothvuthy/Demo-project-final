@@ -261,6 +261,14 @@
       "email": "dara@gmail.com",
       "password": "dara123",
       "id": "HOnd_Yy6j8k"
+    },
+    {
+      "name": "Dara Doe",
+      "email": "dara.doe@example.com",
+      "password": "dara123",
+      "phone": "2222-2222",
+      "address": "456 st, USA",
+      "id": "50JltE1jB_A"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

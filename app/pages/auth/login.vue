@@ -7,6 +7,21 @@
       <h1 class="text-lg sm:text-xl font-bold text-gray-800 text-center mb-5 sm:mb-7">Sign In to Your Account</h1>
 
       <form @submit.prevent="handleLogin" class="space-y-4">
+      <!-- Full Name -->
+<div>
+  <label for="fullname" class="block text-sm font-medium text-gray-700 mb-2">
+    Full Name
+  </label>
+  <input
+    v-model="form.fullname"
+    type="text"
+    id="fullname"
+    required
+    placeholder="Enter your full name"
+    class="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-colors"
+  />
+</div>
+
         <div>
           <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
           <input
@@ -31,6 +46,36 @@
           />
         </div>
 
+                <!-- Phone -->
+<div>
+  <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+    Phone Number
+  </label>
+  <input
+    v-model="form.phone"
+    type="tel"
+    id="phone"
+    required
+    placeholder="Enter your phone number"
+    class="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-colors"
+  />
+</div>
+
+<!-- Address -->
+<div>
+  <label for="address" class="block text-sm font-medium text-gray-700 mb-2">
+    Address
+  </label>
+  <textarea
+    v-model="form.address"
+    id="address"
+    required
+    rows="3"
+    placeholder="Enter your address"
+    class="w-full px-3 sm:px-4 py-2.5 sm:py-3 border border-gray-300 rounded-lg text-base focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-colors resize-none"
+  ></textarea>
+</div>
+
         <button
           type="submit"
           :disabled="loading"
@@ -51,7 +96,6 @@
 
         <div class="text-center text-sm space-y-2 mt-5">
           <p>Don't have an account? <NuxtLink to="/auth/register" class="text-orange-500 font-semibold hover:underline">Sign up</NuxtLink></p>
-          <p><NuxtLink to="/auth/forgot-password" class="text-sky-600 hover:underline">Forgot Password?</NuxtLink></p>
         </div>
       </form>
     </div>
@@ -63,8 +107,11 @@ import { ref } from 'vue'
 const API_USERS_URL = 'http://localhost:8000/users'
 
 const form = ref({
+  fullname: '',
   email: '',
-  password: ''
+  password: '',
+  phone: '',
+  address: ''
 })
 
 const loading = ref(false)
@@ -76,9 +123,15 @@ const message = ref({
 
 const handleLogin = async () => {
   // Validate fields
-  if (!form.value.email.trim() || !form.value.password.trim()) {
+  if (
+  !form.value.fullname.trim() ||
+  !form.value.email.trim() ||
+  !form.value.password.trim() ||
+  !form.value.phone.trim() ||
+  !form.value.address.trim()
+) {
     message.value = {
-      text: '⚠️ Please fill in all fields.',
+      text: 'Please fill in all fields.',
       type: 'error'
     }
     return
@@ -97,16 +150,19 @@ const handleLogin = async () => {
     })
 
     // Find matching user
-    const user = users.find(
-      (user) =>
-        user.email.toLowerCase() === form.value.email.trim().toLowerCase() &&
-        user.password === form.value.password.trim()
-    )
+const user = users.find(
+  (user) =>
+    user.name?.toLowerCase() === form.value.fullname.trim().toLowerCase() &&
+    user.email?.toLowerCase() === form.value.email.trim().toLowerCase() &&
+    user.password === form.value.password.trim() &&
+    user.phone === form.value.phone.trim() &&
+    user.address?.toLowerCase() === form.value.address.trim().toLowerCase()
+)
 
     // No matching user
     if (!user) {
       message.value = {
-        text: '❌ Invalid email or password.',
+        text: 'Invalid email or password.',
         type: 'error'
       }
       return
@@ -114,18 +170,18 @@ const handleLogin = async () => {
 
     // Login successful
     message.value = {
-      text: '✅ Login successful! Redirecting...',
+      text: 'Login successful! Redirecting...',
       type: 'success'
     }
 
     // Save logged-in user
     localStorage.setItem(
-      'eshop_user',
+      'shopio_user',
       JSON.stringify(user)
     )
 
     // Optional: save a simple login status
-    localStorage.setItem('eshop_logged_in', 'true')
+    localStorage.setItem('shopio_logged_in', 'true')
 
     // Redirect to home
     setTimeout(() => {
@@ -136,7 +192,7 @@ const handleLogin = async () => {
     console.error('Login Error:', err)
 
     message.value = {
-      text: '❌ Unable to connect to the server.',
+      text: 'Unable to connect to the server.',
       type: 'error'
     }
   } finally {
